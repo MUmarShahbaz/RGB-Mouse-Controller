@@ -58,13 +58,15 @@ namespace RGB_Controller
             }
         }
 
-        private void Save_Click(object sender, EventArgs e)
+        private async void Save_Click(object sender, EventArgs e)
         {
             if (Connected)
             {
                 try
                 {
                     serialPort1.WriteLine("S" + txtHex1.Text + txtHex2.Text);
+                    await Task.Delay((int)(int.Parse(Interval.Text)*1.5));
+                    MessageBox.Show("Saved " + txtHex1.Text + " & " + txtHex2.Text);
                 } catch 
                 {
                     MessageBox.Show("Couldn't transmit to " + guna2ComboBox2.Text);
