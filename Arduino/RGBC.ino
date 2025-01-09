@@ -1,5 +1,12 @@
 #include <EEPROM.h>
 
+#define TRP 3
+#define TGP 5
+#define TBP 6
+#define BRP 9
+#define BGP 10
+#define BBP 11
+
 int TRed;
 int TGreen;
 int TBlue;
@@ -12,12 +19,12 @@ void setup() {
   Serial.begin(9600);
 
   // Initialize PWM pins
-  pinMode(A0, OUTPUT);
-  pinMode(A1, OUTPUT);
-  pinMode(A2, OUTPUT);
-  pinMode(A3, OUTPUT);
-  pinMode(A4, OUTPUT);
-  pinMode(A5, OUTPUT);
+  pinMode(TRP, OUTPUT);
+  pinMode(TGP, OUTPUT);
+  pinMode(TBP, OUTPUT);
+  pinMode(BRP, OUTPUT);
+  pinMode(BGP, OUTPUT);
+  pinMode(BBP, OUTPUT);
 
   TRed = EEPROM.read(0);
   TGreen = EEPROM.read(1);
@@ -26,12 +33,12 @@ void setup() {
   BGreen = EEPROM.read(4);
   BBlue = EEPROM.read(5);
 
-  analogWrite(A0, TRed);
-  analogWrite(A1, TGreen);
-  analogWrite(A2, TBlue);
-  analogWrite(A3, BRed);
-  analogWrite(A4, BGreen);
-  analogWrite(A5, BBlue);
+  analogWrite(TRP, TRed);
+  analogWrite(TGP, TGreen);
+  analogWrite(TBP, TBlue);
+  analogWrite(BRP, BRed);
+  analogWrite(BGP, BGreen);
+  analogWrite(BBP, BBlue);
 
   // Print the values
   Serial.print("TRed: "); Serial.println(TRed);
@@ -78,12 +85,12 @@ void loop() {
     Serial.print("BBlue: "); Serial.println(BBlue);
 
     // Map the extracted RGB values to PWM outputs
-    analogWrite(A0, TRed);
-    analogWrite(A1, TGreen);
-    analogWrite(A2, TBlue);
-    analogWrite(A3, BRed);
-    analogWrite(A4, BGreen);
-    analogWrite(A5, BBlue);
+    analogWrite(TRP, TRed);
+    analogWrite(TGP, TGreen);
+    analogWrite(TBP, TBlue);
+    analogWrite(BRP, BRed);
+    analogWrite(BGP, BGreen);
+    analogWrite(BBP, BBlue);
   }
 }
 
