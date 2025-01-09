@@ -1,0 +1,12 @@
+C:\Users\shahb\source\repos\RGB Controller\RGB Controller\obj\Debug\RGB Controller.csproj.AssemblyReference.cache
+C:\Users\shahb\source\repos\RGB Controller\RGB Controller\obj\Debug\RGB_Controller.Main.resources
+C:\Users\shahb\source\repos\RGB Controller\RGB Controller\obj\Debug\RGB_Controller.Properties.Resources.resources
+C:\Users\shahb\source\repos\RGB Controller\RGB Controller\obj\Debug\RGB Controller.csproj.GenerateResource.cache
+C:\Users\shahb\source\repos\RGB Controller\RGB Controller\obj\Debug\RGB Controller.csproj.CoreCompileInputs.cache
+C:\Users\shahb\source\repos\RGB Controller\RGB Controller\bin\Debug\RGB Controller.exe.config
+C:\Users\shahb\source\repos\RGB Controller\RGB Controller\bin\Debug\RGB Controller.exe
+C:\Users\shahb\source\repos\RGB Controller\RGB Controller\bin\Debug\RGB Controller.pdb
+C:\Users\shahb\source\repos\RGB Controller\RGB Controller\bin\Debug\Guna.UI2.dll
+C:\Users\shahb\source\repos\RGB Controller\RGB Controller\obj\Debug\RGB Cont.DD70EC79.Up2Date
+C:\Users\shahb\source\repos\RGB Controller\RGB Controller\obj\Debug\RGB Controller.exe
+C:\Users\shahb\source\repos\RGB Controller\RGB Controller\obj\Debug\RGB Controller.pdb

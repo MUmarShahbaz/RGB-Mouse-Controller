@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35303.130
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RGB Controller", "RGB Controller\RGB Controller.csproj", "{D34A5503-1D2B-4068-A417-3FFD2509D834}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D34A5503-1D2B-4068-A417-3FFD2509D834}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D34A5503-1D2B-4068-A417-3FFD2509D834}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D34A5503-1D2B-4068-A417-3FFD2509D834}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D34A5503-1D2B-4068-A417-3FFD2509D834}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {35C66D4A-DBA4-4B75-A38D-325BCD29483F}
+	EndGlobalSection
+EndGlobal
