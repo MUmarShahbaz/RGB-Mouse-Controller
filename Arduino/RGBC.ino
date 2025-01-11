@@ -1,18 +1,21 @@
 #include <EEPROM.h>
 
-#define TRP 3
-#define TGP 5
-#define TBP 6
-#define BRP 9
-#define BGP 10
-#define BBP 11
+// Define the pins, you can change them based on your microcontroller
+// All pins MUST be PWM
+#define TRP 11  // Top Red Pin
+#define TGP 10  // Top Green Pin
+#define TBP 9   // Top Blue Pin
+#define BRP 6   // Bottom Red Pin
+#define BGP 5   // Bottom Green Pin
+#define BBP 3   // Bottom Blue Pin
 
-int TRed;
-int TGreen;
-int TBlue;
-int BRed;
-int BGreen;
-int BBlue;
+// Containers for the values being written to the LEDs
+int TRed;      // Top Red
+int TGreen;    // Top Green
+int TBlue;     // Top Blue
+int BRed;      // Bottom Red
+int BGreen;    // Bottom Green
+int BBlue;     // Bottom Blue
 
 void setup() {
   // Start serial communication
@@ -26,6 +29,7 @@ void setup() {
   pinMode(BGP, OUTPUT);
   pinMode(BBP, OUTPUT);
 
+  // Read previously saved values
   TRed = EEPROM.read(0);
   TGreen = EEPROM.read(1);
   TBlue = EEPROM.read(2);
@@ -33,6 +37,7 @@ void setup() {
   BGreen = EEPROM.read(4);
   BBlue = EEPROM.read(5);
 
+  // Write the values
   analogWrite(TRP, TRed);
   analogWrite(TGP, TGreen);
   analogWrite(TBP, TBlue);
@@ -52,8 +57,9 @@ void setup() {
 void loop() {
   // Check if data is available on the serial port
   if (Serial.available()) {
+    // Receive the Input
     String colors = Serial.readStringUntil("/n");
-    if (colors[0] == '#'){
+    if (colors[0] == '#'){  // Processing for regular input
       TRed = 16*htd(colors[1]) + htd(colors[2]);
       TGreen = 16*htd(colors[3]) + htd(colors[4]);
       TBlue = 16*htd(colors[5]) + htd(colors[6]);
@@ -61,7 +67,7 @@ void loop() {
       BGreen = 16*htd(colors[10]) + htd(colors[11]);
       BBlue = 16*htd(colors[12]) + htd(colors[13]);
     }
-    if (colors[0] == 'S') {
+    if (colors[0] == 'S') {  // Processing for the save command, and saving to the EEPROM
       TRed = 16*htd(colors[2]) + htd(colors[3]);
       TGreen = 16*htd(colors[4]) + htd(colors[5]);
       TBlue = 16*htd(colors[6]) + htd(colors[7]);
@@ -98,6 +104,6 @@ int htd(char c){
   if (c >= '0' && c <= '9') {
     return int(c - '0');
   } else if (c >= 'A') {
-    return (c - 'A' + 10);  // Convert letter character to its integer value
+    return (c - 'A' + 10);
   }
 }
