@@ -12,7 +12,9 @@ This project is a custom RGB lighting system designed for a wireless gaming mous
 ## Hardware Requirements
 - **RGB LEDs**: 2 4-pin common cathode RGB LEDs.
 - **Microcontroller**: Arduino (any compatible version).
-- No additional hardware components required.
+- **Resistor**: 1 220 Ohms
+![RGB Mouse](https://github.com/user-attachments/assets/14ca1e85-301d-4beb-9ff9-eaac92d13934)
+
 
 ## Software Requirements
 - **Arduino IDE**: For uploading the code to the Arduino.
@@ -23,7 +25,7 @@ This project is a custom RGB lighting system designed for a wireless gaming mous
 ### Arduino Setup
 1. Install the Arduino IDE from [Arduino's website](https://www.arduino.cc/en/software).
 2. Connect your Arduino board to your computer via USB.
-3. Open the provided Arduino sketch—[RGBC.ino](https://github.com/MUmarShahbaz/RGB-Mouse-Controller/blob/main/Arduino/RGBC.ino)—in the Arduino IDE and upload it to your Arduino board.
+3. Open the provided Arduino sketch ([RGBC.ino](https://github.com/MUmarShahbaz/RGB-Mouse-Controller/blob/main/Arduino/RGBC.ino)) in the Arduino IDE and upload it to your Arduino board.
 
 ### Desktop Application
 ![Screenshot 2025-01-09 022657](https://github.com/user-attachments/assets/a4a5c31c-925a-4b46-8f5e-816d1c19e86a)
@@ -32,13 +34,4 @@ This project is a custom RGB lighting system designed for a wireless gaming mous
 - Use the provided controls to select RGB colors for your gaming mouse.
 - A live preview will show the changes in real-time.
 - Once satisfied with your configuration, click the **Save** button to store the settings in the EEPROM.
-
-### Persisting Settings
 - The RGB settings are saved to the Arduino's EEPROM, which ensures that the colors remain even after rebooting the Arduino.
-
-## Known Issues
-- **Timing Issue**: The default interval has no breathing time, which means that the save button might get overwritten by subsequent code. 
-  - **Solution**: Increase the interval value significantly before clicking the **Save** button to prevent overwriting.
-
-## License
-This project is licensed under the [Apache 2.0 License](LICENSE.md).
